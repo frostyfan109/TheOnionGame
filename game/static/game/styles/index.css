@@ -1,0 +1,91 @@
+html,body {
+  height:100%;
+}
+
+body {
+  margin:0;
+  overflow:hidden;
+  background-color:#89bdd3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+#header {
+  position:absolute;
+  top:25%;
+  margin:0;
+  transform:translateY(-50%);
+  font-size: calc(3vw + 3vh + 5vmin);
+  /* font-size:5.6em; */
+  text-align:center;
+  font-family:"Comic Sans MS","Papyrus";
+  color:white;
+}
+
+#gameButtonContainer {
+  width:50%;
+  top:50%;
+  position:absolute;
+  display:flex;
+  justify-content:space-around;
+  animation:topToCenter .4s linear 1;
+}
+
+.banner {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.marquee > * {
+  position:absolute;
+  left:100%;
+  /* transform:translateX(50%); */
+  display:inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee > *:nth-child(1) {
+  animation-delay:5s;
+}
+
+.divButton {
+  white-space:nowrap;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  background-color:rgb(221,221,221);
+  /* box-shadow:-2px -2px rgb(150,150,150); */
+  border:2px solid rgb(175,175,175);
+  padding:10px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  -ms-user-select:none;
+}
+
+.divButton > * {
+  font-size:1.5em;
+  font-family:"Comic Sans MS","Papyrus";
+}
+
+@keyframes topToCenter {
+  0% {
+    top:0%;
+    opacity:0;
+  }
+  90% {
+    opacity:.25;
+  }
+  100% {
+    top:50%;
+    opacity:1;
+  }
+}
+
+@keyframes scroll {
+  0% {left:100%;}
+  100% {left:-100%;}
+}

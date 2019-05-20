@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>The Onion Game</title>
+  <link rel="stylesheet" href="{% static 'game/styles/game.css' %}"
+</head>
+<body>
+  <div id="loading"><h1 class="no-select" id="loadingText"></h1></div>
+  <div id="questionContainer">
+    <h2 class="no-select" id="questionText"></h2>
+  </div>
+  <div id="streakContainer"><h1 class="no-select" id="streakText"></h1></div>
+  <div id="gameOverContainer">
+    <h1 class="no-select" id="playAgainBanner">Play Again</h1>
+    <h1 class="no-select" id="gameOverText"></h1>
+  </div>
+  <div id="guessContainer">
+    <div class="guess-button no-select" id="realButton"><h1>REAL</h1></div>
+    <div class="guess-button no-select" id="fakeButton"><h1>FAKE</h1></div>
+  </div>
+  <script src="{% static 'game/scripts/game.js' %}"></script>
+</body>
+</html>

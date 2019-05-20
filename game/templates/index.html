@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>The Onion Game</title>
+  <link rel="stylesheet" href="{% static 'game/styles/index.css' %}"/>
+</head>
+<body>
+  <h1 id="header">The Onion Game</h1>
+  <div id="gameButtonContainer">
+    <div id="singlePlayerButton" class="divButton"><span>Single Player</span></div>
+    <div id="multiplayerButton" class="divButton"><span>Multiplayer</span></div>
+  </div>
+  <div class="marquee">
+  <img class="banner" src="{% static 'game/images/banner.png' %}"/>
+  <img class="banner" src="{% static 'game/images/banner.png' %}"/>
+  </div>
+  <script src="{% static 'game/scripts/index.js' %}"></script>
+
+</body>
+</html>

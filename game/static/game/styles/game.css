@@ -1,0 +1,144 @@
+html,body {
+  height:100%
+}
+
+body {
+  margin:0;
+  overflow:hidden;
+  display:flex;
+}
+
+#loading {
+  /* display:none; */
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#loadingText {
+  color:white;
+  font-size:2.5em;
+}
+
+#streakContainer {
+  position:absolute;
+  display:none;
+  width:100%;
+  height:100%;
+  background-color:green;
+  opacity:0;
+  justify-content:center;
+  align-items:center;
+}
+
+#streakText {
+  font-size:2em;
+}
+
+#gameOverContainer {
+  position:absolute;
+  display:none;
+  width:100%;
+  height:100%;
+  background-color:red;
+  justify-content:center;
+  align-items:center;
+}
+
+#playAgainBanner {
+  position:absolute;
+  top:20%;
+  width:100%;
+  text-align:center;
+  padding:5px;
+  background-color:#c9c9c9;
+}
+
+#gameOverText {
+  font-size:2em;
+}
+
+#questionContainer {
+  height:100%;
+  width:50%;
+  background-color:#89bdd3;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#questionText {
+  font-size:2em;
+  margin:0;
+  width:60%;
+}
+
+#guessContainer {
+  height:100%;
+  width:50%;
+  display:flex;
+  flex-direction:column;
+}
+
+#realButton {
+  background-color:black;
+  color:white;
+}
+
+#fakeButton {
+  background-color:white;
+  color:black;
+}
+
+.guess-button {
+  width:100%;
+  height:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.guess-button > * {
+  margin:0;
+}
+
+.no-select {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  -ms-user-select:none;
+}
+
+.correctAnimationIn {
+  display:flex !important;
+  animation:correctFadeIn .75s linear 1;
+}
+.correctAnimationOut {
+  display:flex !important;
+  animation:correctFadeOut .75s linear 1;
+}
+
+.fadeIn {
+  animation:fadeIn .75s linear 1;
+}
+
+@keyframes correctFadeIn {
+  0% {opacity:0;}
+  80% {opacity:1;}
+  100% {opacity:1;}
+}
+
+@keyframes correctFadeOut {
+  0% {opacity:1;}
+  20% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
